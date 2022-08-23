@@ -1,15 +1,11 @@
 (ns cljapi.core
   (:require 
-   [ring.adapter.jetty9 :as jetty]))
+   [cljapi.systen :as system]))
 
-(defn ring-handler
-  [_req]
-  {:status 200
-   :body "Hello, Clojure API"})
 
 (defn -main
   [& _args]
-  (jetty/run-jetty ring-handler {:port 8000}))
+  (system/start))
 
 (comment 
   (-main)
