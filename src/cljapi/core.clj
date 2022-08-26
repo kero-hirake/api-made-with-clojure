@@ -1,6 +1,6 @@
 (ns cljapi.core
   (:require 
-   [cljapi.systen :as system]))
+   [cljapi.system :as system]))
 
 
 (defn -main

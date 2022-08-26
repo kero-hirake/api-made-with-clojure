@@ -1,4 +1,4 @@
-(ns cljapi.systen
+(ns cljapi.system
   (:require
    [cljapi.component.handler :as c.handler]
    [cljapi.component.server :as c.server]
@@ -19,10 +19,10 @@
 (defn stop [system]
   (component/stop system))
 
-(defonce system (atom nil))
+;; (defonce system (atom nil))
 
-(defn go []
-  (when @system
-    (stop @system)
-    (reset! @system nil))
-  (reset! system (start)))
+;; (defn go []
+;;   (when @system
+;;     (stop @system)
+;;     (reset! @system nil))
+;;   (reset! system (start)))
