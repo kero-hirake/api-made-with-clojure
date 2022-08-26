@@ -8,8 +8,8 @@
   (start [this]
     (if server
       this
-      (assoc this :server (jetty/run-jetty (:handler handler) opts)))         )
+      (assoc this :server (jetty/run-jetty (:handler handler) opts))))
   (stop [this]
-        (when server
-          (jetty/stop-server server))
-        (assoc this :server nil)))
+    (when server
+      (jetty/stop-server server))
+    (assoc this :server nil)))

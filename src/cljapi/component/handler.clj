@@ -3,7 +3,7 @@
    [com.stuartsierra.component :as component]))
 
 (defn- ring-handler
-  [-req]
+  [_req]
   {:status 200
    :body "Hello, Clojure API"})
 
