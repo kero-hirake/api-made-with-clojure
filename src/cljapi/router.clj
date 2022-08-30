@@ -1,12 +1,14 @@
 (ns cljapi.router
   (:require
-   [cljapi.handler.api.greeting :as api.greeting]
-   [cljapi.handler.health :as health]
+   [cljapi.handler :as h]
    [reitit.ring :as ring]))
 
 (def router
   (ring/router
-   [["/health" health/health]
+   [["/health" {:name ::health 
+                :handler h/handler}]
     ["/api"
-     ["/hello" api.greeting/hello]
-     ["/goodbye" api.greeting/goodbye]]]))
+     ["/hello" {:name ::hello
+                :handler h/handler}]
+     ["/goodbye" {:name ::goodbye
+                  :handler h/handler}]]]))

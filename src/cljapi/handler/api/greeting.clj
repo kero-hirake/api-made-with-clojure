@@ -1,9 +1,13 @@
 (ns cljapi.handler.api.greeting
   (:require
+   [cljapi.handler :as h]
+   [cljapi.router :as r]
    [ring.util.http-response :as res]))
 
-(defn hello [_]
+(defmethod h/handler [::r/hello :get]
+  [_] 
   (res/ok "hello world"))
 
-(defn goodbye [_]
+(defmethod h/handler [::r/goodbye :get]
+  [_]
   (res/ok "goodbye"))

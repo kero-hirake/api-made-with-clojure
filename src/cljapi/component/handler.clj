@@ -1,5 +1,6 @@
 (ns cljapi.component.handler
   (:require
+   [cljapi.handler.api.greeting]
    [cljapi.router :as router]
    [com.stuartsierra.component :as component]
    [reitit.ring :as ring]
