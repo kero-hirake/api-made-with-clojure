@@ -7,20 +7,20 @@
    [com.stuartsierra.component :as component]
    [unilog.config :as unilog]))
 
-(defn- new-system [config]
+(defn- new-system [{:keys [profile] :as config}]
   (component/system-map
-   :handler (c.handler/map->Handler {})
+   :handler (c.handler/map->Handler {:profile profile})
    :server (component/using
             (c.server/map->Jetty9Server (:server config))
             [:handler])))
 
-(defn init-logging [config]
+(defn init-logging! [config]
   (unilog/start-logging! (:logging config)))
 
 (defn start [profile]
   (let [config (config/read-config profile)
         system (new-system config)
-        _ (init-logging config)
+        _ (init-logging! config)
         _ (log/info "system is ready to start")
         started-system (component/start system)]
     (log/info "system is started")
