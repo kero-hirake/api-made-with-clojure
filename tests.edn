@@ -11,6 +11,6 @@
  :reporter kaocha.report/documentation
 
  :capture-output? true
- :koacha.plugin.profileing/count 10
+ :kaocha.plugin.profiling/count 10
  
  }

@@ -2,7 +2,7 @@
                             :default :info}
            :console #profile {:prod {:encoder :json}
                               :default true}
-           :override {"org.eclipse.jetty" :info}}
+           :overrides {"org.eclipse.jetty" :info}}
  
  :server {:opts {:host "localhost"
                  :port #long #profile {:default 5000

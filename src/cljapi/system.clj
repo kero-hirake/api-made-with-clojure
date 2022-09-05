@@ -14,7 +14,7 @@
             (c.server/map->Jetty9Server (:server config))
             [:handler])))
 
-(defn init-logging! [config]
+(defn- init-logging! [config]
   (unilog/start-logging! (:logging config)))
 
 (defn start [profile]
