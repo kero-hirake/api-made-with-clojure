@@ -1,6 +1,6 @@
 (ns cljapi.handler
   (:require
-   [ring.util.http-response :as res])) 
+   [ring.util.http-response :as res]))
 
 (defmulti handler
   (fn [req]

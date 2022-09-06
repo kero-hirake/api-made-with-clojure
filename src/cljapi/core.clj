@@ -1,12 +1,8 @@
 (ns cljapi.core
   (:gen-class)
-  (:require 
+  (:require
    [cljapi.system :as system]))
 
 (defn -main
   [& _args]
   (system/start :prod))
-
-(comment 
-  (-main)
-  )

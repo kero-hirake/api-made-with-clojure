@@ -1,5 +1,6 @@
 (ns cljapi.component.handler
   (:require
+   [cljapi.handler.api.account]
    [cljapi.handler.api.greeting]
    [cljapi.handler.health]
    [cljapi.router :as router]
@@ -25,7 +26,7 @@
                       (apply conj dev-middlewares common-middlewares))]
     (ring/ring-handler
      router/router
-     nil
+     nil ;defalut-handler
      {:middleware middlewares})))
 
 (defrecord Handler [handler profile]

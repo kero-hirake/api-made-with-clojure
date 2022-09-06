@@ -5,10 +5,9 @@
    [ring.util.http-response :as res]))
 
 (defmethod h/handler [::r/hello :get]
-  [_] 
-  #_(res/ok {:greeting "hello cljapi"} #_"hello world")
+  [_]
   (res/ok {:greeting "hello cljapi"}))
 
 (defmethod h/handler [::r/goodbye :get]
   [_]
-  (res/ok {:greeting "goodbye"} #_"goodbye"))
+  (res/ok {:greeting "goodbye"}))
