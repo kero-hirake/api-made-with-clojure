@@ -44,7 +44,10 @@
      ["/hello" {:name ::hello
                 :handler h/handler}]
      ["/goodbye" {:name ::goodbye
-                  :handler h/handler}] 
+                  :handler h/handler}]
+     ["/account" {:name ::account
+                  :get {:handler h/handler}
+                  :post {:handler h/handler}}]
      ["/account/:id" {:name ::account-by-id
                       :parameters {:path {:id s/Int}}
                       :put {:handler h/handler}

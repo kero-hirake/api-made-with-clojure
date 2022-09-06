@@ -12,7 +12,8 @@
         ring/ring-defaults {:mvn/version "0.3.3"}
         metosin/muuntaja {:mvn/version "0.6.8"}
         camel-snake-kebab/camel-snake-kebab {:mvn/version "0.4.3"}
-        org.clojure/core.memoize {:mvn/version "1.0.257"}}
+        org.clojure/core.memoize {:mvn/version "1.0.257"}
+        funcool/struct {:mvn/version "1.4.0"}}
  :aliases {:dev {:extra-paths ["dev"]}
            :test {:extra-deps {lambdaisland/kaocha {:mvn/version "1.68.1059"}}
                   :main-opts ["-m" "kaocha.runner"]}
